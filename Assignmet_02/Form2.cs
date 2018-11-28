@@ -78,6 +78,7 @@ namespace Assignmet_02
                 double number = double.Parse(txtLength.Text);
                 double area = number * number;
                 answer.Text = Convert.ToString(area); }
+
             if (comboBox1.SelectedIndex == 1)
             {
                 double number1 = double.Parse(txtLength.Text);

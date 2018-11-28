@@ -19,7 +19,9 @@ namespace Assignmet_02
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form3 f3 = new Form3();
+            this.Hide();
+            f3.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
