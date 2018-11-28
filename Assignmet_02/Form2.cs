@@ -42,6 +42,9 @@ namespace Assignmet_02
                     label4.Text = "A = Length * Length";
                     lblLength.Text = "Length :";
                     txtLength.Visible = true;
+                    txtWidth.Visible = false;
+                    lblWidth.Text = "";
+
                     break;
                 case 1:
                     label4.Text = "A= Length * Width";
@@ -61,8 +64,10 @@ namespace Assignmet_02
                 case 3:
                     label4.Text = "A= pi* Radius^2";
                     lblLength.Text = "Radius :";
+                    lblWidth.Text = "";
                     txtLength.Visible = true;
-                 
+                    txtWidth.Visible = false;
+
                     break;
             }
         }
