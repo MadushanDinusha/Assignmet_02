@@ -57,6 +57,13 @@ namespace Assignmet_02
                     lblWidth.Text = "Altitude :";
                     txtWidth.Visible = true;
                     break;
+
+                case 3:
+                    label4.Text = "A= pi* Radius^2";
+                    lblLength.Text = "Radius :";
+                    txtLength.Visible = true;
+                 
+                    break;
             }
         }
 
@@ -86,6 +93,14 @@ namespace Assignmet_02
                 double area = 0.5 *number1 * number2;
                 answer.Text = Convert.ToString(area);
             }
+            if (comboBox1.SelectedIndex == 3)
+            {
+                double number1 = double.Parse(txtLength.Text);
+                double pi = Math.PI;
+                double area = pi * Math.Pow(number1, 2);
+                answer.Text = Convert.ToString(area);
+            }
+
         }
     }
 }
