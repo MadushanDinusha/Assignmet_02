@@ -103,5 +103,15 @@ namespace Assignmet_02
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            lblLength.Text = "";
+            lblWidth.Text = "";
+            answer.Text = "";
+            label4.Text = "";
+            txtLength.Visible = false;
+            txtWidth.Visible = false;
+        }
     }
 }

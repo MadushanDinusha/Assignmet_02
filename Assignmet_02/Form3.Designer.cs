@@ -65,11 +65,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 76);
+            this.label1.Location = new System.Drawing.Point(18, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Select a shape";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 
@@ -79,7 +80,7 @@
             "Cylinder",
             "Cone",
             "Sphere"});
-            this.comboBox1.Location = new System.Drawing.Point(126, 73);
+            this.comboBox1.Location = new System.Drawing.Point(137, 73);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 4;
