@@ -36,8 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.answer = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblLength = new System.Windows.Forms.Label();
+            this.txtLength = new System.Windows.Forms.TextBox();
+            this.lblWidth = new System.Windows.Forms.Label();
+            this.txtWidth = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -117,28 +119,45 @@
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 8;
             // 
-            // label5
+            // lblLength
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(80, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
-            this.label5.TabIndex = 9;
+            this.lblLength.AutoSize = true;
+            this.lblLength.Location = new System.Drawing.Point(80, 156);
+            this.lblLength.Name = "lblLength";
+            this.lblLength.Size = new System.Drawing.Size(0, 17);
+            this.lblLength.TabIndex = 9;
             // 
-            // textBox1
+            // txtLength
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
+            this.txtLength.Location = new System.Drawing.Point(213, 151);
+            this.txtLength.Name = "txtLength";
+            this.txtLength.Size = new System.Drawing.Size(100, 22);
+            this.txtLength.TabIndex = 10;
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Location = new System.Drawing.Point(70, 200);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(0, 17);
+            this.lblWidth.TabIndex = 11;
+            // 
+            // txtWidth
+            // 
+            this.txtWidth.Location = new System.Drawing.Point(213, 195);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(100, 22);
+            this.txtWidth.TabIndex = 12;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 371);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtWidth);
+            this.Controls.Add(this.lblWidth);
+            this.Controls.Add(this.txtLength);
+            this.Controls.Add(this.lblLength);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.answer);
             this.Controls.Add(this.label2);
@@ -166,7 +185,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label answer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblLength;
+        private System.Windows.Forms.TextBox txtLength;
+        private System.Windows.Forms.Label lblWidth;
+        private System.Windows.Forms.TextBox txtWidth;
     }
 }

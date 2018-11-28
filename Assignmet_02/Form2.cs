@@ -15,7 +15,8 @@ namespace Assignmet_02
         public Form2()
         {
             InitializeComponent();
-            textBox1.Visible = false;
+            txtLength.Visible = false;
+            txtWidth.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,12 +36,26 @@ namespace Assignmet_02
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int number=0;
-            switch (number){
-                case 0:
+       
+            switch (comboBox1.SelectedIndex){
+               case 0:
                     label4.Text = "A = Length * Length";
-                    label5.Text = "Length :";
-                    textBox1.Visible = true;
+                    lblLength.Text = "Length :";
+                    txtLength.Visible = true;
+                    break;
+                case 1:
+                    label4.Text = "A= Length * Width";
+                    lblLength.Text = "Length :";
+                    txtLength.Visible = true;
+                    lblWidth.Text = "Width :";
+                    txtWidth.Visible = true;
+                    break;
+                case 2:
+                    label4.Text = "A= (1/2)* Base * Altitude";
+                    lblLength.Text = "Base :";
+                    txtLength.Visible = true;
+                    lblWidth.Text = "Altitude :";
+                    txtWidth.Visible = true;
                     break;
             }
         }
@@ -52,10 +67,25 @@ namespace Assignmet_02
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int number = int.Parse(textBox1.Text);
-            int area = number * number;
-            answer.Text = Convert.ToString(area);
+            if (comboBox1.SelectedIndex==0){
+                double number = double.Parse(txtLength.Text);
+                double area = number * number;
+                answer.Text = Convert.ToString(area); }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                double number1 = double.Parse(txtLength.Text);
+                double number2 = double.Parse(txtWidth.Text);
+                double area = number1 * number2;
+                answer.Text = Convert.ToString(area);
+            }
 
+            if (comboBox1.SelectedIndex == 2)
+            {
+                double number1 = double.Parse(txtLength.Text);
+                double number2 = double.Parse(txtWidth.Text);
+                double area = 0.5 *number1 * number2;
+                answer.Text = Convert.ToString(area);
+            }
         }
     }
 }
