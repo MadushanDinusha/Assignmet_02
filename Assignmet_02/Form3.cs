@@ -119,8 +119,6 @@ namespace Assignmet_02
             {
                 double radius = double.Parse(txtLength.Text);
                 double height = double.Parse(txtWidth.Text);
-                //
-
                 double volume = pi * height * Math.Pow(radius,2);
                 ans.Text = Convert.ToString(volume);
             }
@@ -130,14 +128,14 @@ namespace Assignmet_02
                     double radius = double.Parse(txtLength.Text);
                     double height = double.Parse(txtWidth.Text);
                    
-                    double volume = pi * height * Math.Pow(radius, 2);
+                    double volume =  pi * height * Math.Pow(radius, 2)* 1/3;
                     ans.Text = Convert.ToString(volume);
                 }
             
             if (comboBox1.SelectedIndex == 3)
             {
                 double radius = double.Parse(txtLength.Text);
-                double volume = (4 / 3) * pi * Math.Pow(radius, 3);
+                double volume =  pi * Math.Pow(radius, 3)*4/3;
                 ans.Text = Convert.ToString(volume);
             }
         }
