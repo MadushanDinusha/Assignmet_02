@@ -12,6 +12,7 @@ namespace Assignmet_02
 {
     public partial class Form3 : Form
     {
+
         public Form3()
         {
             InitializeComponent();
@@ -41,32 +42,40 @@ namespace Assignmet_02
             {
                 case 0:
                     label7.Text = "V = Length * Width * Height";
-                    label1.Text = "Length :";
-                    label2.Text = "Width :";
-                    label4.Text = "Height :";
+                    lblLength.Text = "Length :";
+                    lblWidth.Text  = "Width :";
+                    lblHeight.Text = "Height :";
                     txtLength.Visible = true;
-                    txtHeight.Visible = true;
                     txtWidth.Visible = true;
+                    txtHeight.Visible = true;
                     break;
                 case 1:
                     label7.Text = "V = pi * Radius^2 * Height";
-                    label1.Text = "Radius :";
-                    label2.Text = "Height :";
+                    lblLength.Text = "Radius :";
+                    lblWidth.Text = "Height :";
+                    lblHeight.Text = "";
                     txtLength.Visible = true;
-                    txtHeight.Visible = true;
+                    txtWidth.Visible = true;
+                    txtHeight.Visible = false;
                     break;
                 case 2:
                     label7.Text = "V = (1/3) * pi * Radius^2 * Height";
-                    label4.Text = "Radius :";
-                    label1.Text = "Height :";
+                    lblLength.Text = "Radius :";
+                    lblWidth.Text = "Height :";
+                    lblHeight.Text = "";
                     txtLength.Visible = true;
                     txtWidth.Visible = true;
+                    txtHeight.Visible = false;
                     break;
 
                 case 3:
-                    label4.Text = "A= pi* Radius^2";
-                    label1.Text = "Radius :";
+                    label7.Text = "V = (4/3) * pi * Radius^3";
+                    lblLength.Text = "Radius :";
+                    lblWidth.Text = "";
+                    lblHeight.Text = "";
                     txtLength.Visible = true;
+                    txtHeight.Visible = false;
+                    txtWidth.Visible = false;
 
                     break;
             }
@@ -79,7 +88,7 @@ namespace Assignmet_02
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -94,12 +103,66 @@ namespace Assignmet_02
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+            
+            double pi = Math.PI;
+            if (comboBox1.SelectedIndex == 0)
+            {
+                double length = double.Parse(txtLength.Text);
+                double width = double.Parse(txtWidth.Text);
+                double height = double.Parse(txtHeight.Text);
+                double volume = width * height * length;
+                ans.Text = Convert.ToString(volume);
+            }
 
+            if (comboBox1.SelectedIndex == 1)
+            {
+                double radius = double.Parse(txtLength.Text);
+                double height = double.Parse(txtWidth.Text);
+                
+
+                double volume = pi * height * Math.Pow(radius,2);
+                ans.Text = Convert.ToString(volume);
+            }
+           
+                if (comboBox1.SelectedIndex == 2)
+                {
+                    double radius = double.Parse(txtLength.Text);
+                    double height = double.Parse(txtWidth.Text);
+                   
+                    double volume = pi * height * Math.Pow(radius, 2);
+                    ans.Text = Convert.ToString(volume);
+                }
+            
+            if (comboBox1.SelectedIndex == 3)
+            {
+                double radius = double.Parse(txtLength.Text);
+                double volume = (4 / 3) * pi * Math.Pow(radius, 3);
+                ans.Text = Convert.ToString(volume);
+            }
         }
 
         private void label3_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblHeight.Text = "";
+            lblLength.Text = "";
+            lblWidth.Text = "";
+            label7.Text = "";
+            ans.Text = "";
+            comboBox1.Text = "";
+            txtHeight.Visible = false;
+            txtLength.Visible = false;
+            txtWidth.Visible = false;
         }
     }
 }
