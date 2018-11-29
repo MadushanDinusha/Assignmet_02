@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -37,8 +38,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 37);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(66, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(337, 29);
             this.label1.TabIndex = 0;
@@ -46,9 +50,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 125);
+            this.button1.Location = new System.Drawing.Point(54, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.Size = new System.Drawing.Size(107, 59);
             this.button1.TabIndex = 1;
             this.button1.Text = "Area";
             this.button1.UseVisualStyleBackColor = true;
@@ -56,9 +60,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(235, 125);
+            this.button2.Location = new System.Drawing.Point(336, 214);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.Size = new System.Drawing.Size(108, 59);
             this.button2.TabIndex = 2;
             this.button2.Text = "Volume";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,7 +70,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(139, 206);
+            this.button3.Location = new System.Drawing.Point(201, 392);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 35);
             this.button3.TabIndex = 3;
@@ -78,7 +82,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 253);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(479, 455);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
