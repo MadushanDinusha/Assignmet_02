@@ -79,34 +79,42 @@ namespace Assignmet_02
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex==0){
-                double number = double.Parse(txtLength.Text);
-                double area = number * number;
-                answer.Text = Convert.ToString(area); }
-
-            if (comboBox1.SelectedIndex == 1)
+            try
             {
-                double number1 = double.Parse(txtLength.Text);
-                double number2 = double.Parse(txtWidth.Text);
-                double area = number1 * number2;
-                answer.Text = Convert.ToString(area);
-            }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    double number = double.Parse(txtLength.Text);
+                    double area = number * number;
+                    answer.Text = Convert.ToString(area);
+                }
 
-            if (comboBox1.SelectedIndex == 2)
-            {
-                double number1 = double.Parse(txtLength.Text);
-                double number2 = double.Parse(txtWidth.Text);
-                double area = 0.5 *number1 * number2;
-                answer.Text = Convert.ToString(area);
-            }
-            if (comboBox1.SelectedIndex == 3)
-            {
-                double number1 = double.Parse(txtLength.Text);
-                double pi = Math.PI;
-                double area = pi * Math.Pow(number1, 2);
-                answer.Text = Convert.ToString(area);
-            }
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    double number1 = double.Parse(txtLength.Text);
+                    double number2 = double.Parse(txtWidth.Text);
+                    double area = number1 * number2;
+                    answer.Text = Convert.ToString(area);
+                }
 
+                if (comboBox1.SelectedIndex == 2)
+                {
+                    double number1 = double.Parse(txtLength.Text);
+                    double number2 = double.Parse(txtWidth.Text);
+                    double area = 0.5 * number1 * number2;
+                    answer.Text = Convert.ToString(area);
+                }
+                if (comboBox1.SelectedIndex == 3)
+                {
+                    double number1 = double.Parse(txtLength.Text);
+                    double pi = Math.PI;
+                    double area = pi * Math.Pow(number1, 2);
+                    answer.Text = Convert.ToString(area);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Enter a numeric value");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
