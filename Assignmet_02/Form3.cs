@@ -103,42 +103,48 @@ namespace Assignmet_02
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            
-            double pi = Math.PI;
-            if (comboBox1.SelectedIndex == 0)
-            {
-                double length = double.Parse(txtLength.Text);
-                double width = double.Parse(txtWidth.Text);
-                double height = double.Parse(txtHeight.Text);
-                double volume = width * height * length;
-                ans.Text = Convert.ToString(volume);
-            }
 
-            if (comboBox1.SelectedIndex == 1)
-            {
-                double radius = double.Parse(txtLength.Text);
-                double height = double.Parse(txtWidth.Text);
-                double volume = pi * height * Math.Pow(radius,2);
-                ans.Text = Convert.ToString(volume);
-            }
-           
+
+            double pi = Math.PI;
+            try {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    double length = double.Parse(txtLength.Text);
+                    double width = double.Parse(txtWidth.Text);
+                    double height = double.Parse(txtHeight.Text);
+                    double volume = width * height * length;
+                    ans.Text = Convert.ToString(volume);
+                }
+
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    double radius = double.Parse(txtLength.Text);
+                    double height = double.Parse(txtWidth.Text);
+                    double volume = pi * height * Math.Pow(radius, 2);
+                    ans.Text = Convert.ToString(volume);
+                }
+
                 if (comboBox1.SelectedIndex == 2)
                 {
                     double radius = double.Parse(txtLength.Text);
                     double height = double.Parse(txtWidth.Text);
-                   
-                    double volume =  pi * height * Math.Pow(radius, 2)* 1/3;
+
+                    double volume = pi * height * Math.Pow(radius, 2) * 1 / 3;
                     ans.Text = Convert.ToString(volume);
                 }
-            
-            if (comboBox1.SelectedIndex == 3)
-            {
-                double radius = double.Parse(txtLength.Text);
-                double volume =  pi * Math.Pow(radius, 3)*4/3;
-                ans.Text = Convert.ToString(volume);
+
+                if (comboBox1.SelectedIndex == 3)
+                {
+                    double radius = double.Parse(txtLength.Text);
+                    double volume = pi * Math.Pow(radius, 3) * 4 / 3;
+                    ans.Text = Convert.ToString(volume);
+                }
             }
-        }
+            catch (Exception)
+            {
+                MessageBox.Show("pelase enter a numeric value");
+            }
+            }
 
         private void label3_Click_1(object sender, EventArgs e)
         {
